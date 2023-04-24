@@ -1,0 +1,9 @@
+apiVersion: dummy.configuration.upbound.io/v1alpha1
+kind: RobotTriad
+metadata:
+  name: example
+  namespace: default
+spec:
+  colorFirst: yellow
+  colorSecond: blue
+  colorThird: green

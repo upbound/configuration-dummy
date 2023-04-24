@@ -1,0 +1,46 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: xrobottriads.dummy.configuration.upbound.io
+spec:
+  writeConnectionSecretsToNamespace: upbound-system
+  compositeTypeRef:
+    apiVersion: dummy.configuration.upbound.iov1alpha1
+    kind: XRobotTriad
+  resources:
+    - name: first
+      base:
+        apiVersion: iam.dummy.upbound.io/v1alpha1
+        kind: Robot
+        spec:
+          forProvider:
+            color: to-be-patched.
+      patches:
+        - fromFieldPath: spec.colorFirst
+          toFieldPath: spec.forProvider.color
+          policy:
+            fromFieldPath: Required
+    - name: second
+      base:
+        apiVersion: iam.dummy.upbound.io/v1alpha1
+        kind: Robot
+        spec:
+          forProvider:
+            color: to-be-patched.
+      patches:
+        - fromFieldPath: spec.colorSecond
+          toFieldPath: spec.forProvider.color
+          policy:
+            fromFieldPath: Required
+    - name: third
+      base:
+        apiVersion: iam.dummy.upbound.io/v1alpha1
+        kind: Robot
+        spec:
+          forProvider:
+            color: to-be-patched.
+      patches:
+        - fromFieldPath: spec.colorThird
+          toFieldPath: spec.forProvider.color
+          policy:
+            fromFieldPath: Required
