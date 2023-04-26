@@ -1,7 +1,7 @@
 apiVersion: meta.pkg.crossplane.io/v1alpha1
 kind: Configuration
 metadata:
-  name: configuration-scratch
+  name: configuration-dummy
   annotations:
     meta.crossplane.io/maintainer: The Getting Started Organization <support@starter.org>
     meta.crossplane.io/source: github.com/upbound/configuration-scratch
@@ -14,3 +14,6 @@ metadata:
 spec:
   crossplane:
     version: ">=v1.7.0-0"
+  dependsOn:
+    - provider: xpkg.upbound.io/upbound/provider-dummy
+      version: ">=v0.3.0"
