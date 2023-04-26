@@ -1,4 +1,4 @@
-# Dummy Crossplane configuration
+# Dummy Crossplane Configuration
 
 This repository defines a [Crossplane
 configuration](https://docs.crossplane.io/v1.11/concepts/packages/#configuration-packages)
