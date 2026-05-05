@@ -1,3 +1,7 @@
+> **This repository is archived.** It was a test artifact and is no longer maintained.
+
+---
+
 # Dummy Crossplane Configuration
 
 This repository defines a [Crossplane
